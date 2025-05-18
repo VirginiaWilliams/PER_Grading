@@ -1,0 +1,21 @@
+{
+  "name": "electron-test",
+  "productName": "PER Grader",
+  "version": "1.0.0",
+  "description": "App for scoring PER forms",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ginny",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^36.2.1",
+    "html2pdf.js": "^0.9.0",
+    "jspdf": "1.4.1"
+  },
+  "devDependencies": {
+    "@electron/packager": "^18.3.6"
+  },
+  "type": "module"
+}

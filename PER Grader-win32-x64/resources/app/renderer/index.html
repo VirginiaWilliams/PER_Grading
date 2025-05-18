@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="test=device-test, initial-scale=1.0" />
+    <meta
+    http-equiv="Content-Security-Policy"
+    content="script-src 'self' 'unsafe-inline'"
+  />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="js/renderer.js" defer></script>
+  <script src="js/pdfHandling.js" defer></script>
+  <script src="../html2pdf.bundle.min.js"></script>  
+  </head>
+  <body>
+    <div
+      id="entire-thing"
+      class="m-auto h-screen flex flex-col scrollable"
+    >
+      <div class="page-header-container">
+        <h1 class="page-header">Performance Evaluation Report</h1>
+        <h1 class="page-header">TerraNova 3 Form G</h1>
+        <h1 class="page-header">Level 16 Survey</h1>
+      </div>
+      <!-- Form -->
+      <form id="input-form">
+        <div class="student-info">
+          <div>
+            <label class="student-info-label">Student Name: </label>
+            <input
+              type="text"
+              name="studentName"
+              id="student-name"
+              placeholder=""
+            />
+          </div>
+          <div>
+            <label class="student-info-label">Test Date: </label>
+            <input
+              type="date"
+              name="testDate"
+              id="test-date"
+              placeholder=""
+            />
+          </div>
+        </div>
+        <div class="about-section">
+          <br>
+          <p>This evaluation report is based upon an analysis by Basic Skills Assessment & Educational Services staff of the items tested at this level of the TerraNova Third Edition Survey Test. The objectives listed below are the result of an interpretive study by staff members with the goal of helping you better understand the significance of the items tested. CTB is licenser only of the basic data from which this report was generated.</p>
+          <br>
+          <p>The total number of items answered correctly out of the total number possible for each objective is listed to the right.  This report does not imply mastery or non-mastery of objectives listed.</p>
+        </div>
+        <hr>
+        <br>
+        <div class="big-row">
+          <div class="input-col">
+            <!-- Reading Objectives ------------------------------------------------------------------ -->
+            <div class="header-1">
+              <h1 class="h1-left">Reading Objectives</h1>
+              <h1 class="h1-right">Items Correct</h1>
+            </div>
+            <!-- -------------------- -->
+            <h2 class="header-2">Can answer questions at the following levels of understanding:</h2>
+            <div class="number-input-row">
+              <p class="number-input-description">Knowledge</p>
+              <input type="text" class="number-input reading" value=""/>
+              <p class="number-input-score">/ 3</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Comprehension</p>
+              <input type="text" class="number-input reading" value="" />
+              <p class="number-input-score">/ 7</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Analysis</p>
+              <input type="text" class="number-input reading" value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Application</p>
+              <input type="text" class="number-input reading" value="" />
+              <p class="number-input-score">/ 4</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Synthesis</p>
+              <input type="text" class="number-input reading" value="" />
+              <p class="number-input-score">/ 4</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Evaluation</p>
+              <input type="text" class="number-input reading" value="" />
+              <p class="number-input-score">/ 9</p>
+            </div>
+            <!-- -------------------- -->
+            <h2 class="header-2">Vocabulary</h2>
+            <div class="number-input-row">
+              <p class="number-input-description">Can identify synonyms</p>
+              <input type="text" class="number-input reading" value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <!-- -------------------- -->
+            <h2 class="header-2">Other</h2>
+            <div class="number-input-row">
+              <p class="number-input-description">Can identify prefixes, suffixes, and roots</p>
+              <input type="text" class="number-input reading" value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <!-- TOTAL -------------------- -->
+            <div class="number-input-row">
+              <p class="number-input-description total">Total Reading</p>
+              <input type="text" id="reading-total-display" class="number-input total" disabled/>
+              <p class="number-input-score total">/ 30</p>
+            </div>
+            <!-- -------------------- -->
+            <h2 class="header-2 center">Question Types Glossary</h2>
+            <p>Questions at the levels below may start with the following words:</p>
+            <br>
+            <p>
+              Knowledge: list, name, state, identify, find<br>
+              Comprehension: explain, describe, discuss, restate<br>
+              Application: build, remodel, make, write, apply<br>
+              Analyze: support, refute, distinguish, identify, separate<br>
+              Synthesis:  build, compose, create, develop, design, revise<br>
+              Evaluation: compare, contrast, judge, justify, support
+            </p>
+            <br>
+            <p>To train your student to think critically, download the booklet, How to Ask Questions That Matter. Go to www.basicskills.net. Click Products Tab, then Language Arts.</p>
+          </div>
+          <div class="input-col">
+            <!-- Language Objectives ------------------------------------------------------------------ -->
+            <div class="header-1" style="display: flex; flex-direction: row;">
+              <h1 class="h1-left">Language Objectives</h1>
+              <h1 class="h1-right">Items Correct</h1>
+            </div>
+            <!-- -------------------- -->
+            <div class="number-input-row">
+              <p class="number-input-description">Can recognize a correctly constructed sentence</p>
+              <input type="text" class="number-input language"  value="" />
+              <p class="number-input-score">/ 5</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use common verbs correctly</p>
+              <input type="text" class="number-input language"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use adverbs correctly </p>
+              <input type="text" class="number-input language"  value="" />
+              <p class="number-input-score">/ 2</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use common pronouns correctly</p>
+              <input type="text" class="number-input language"  value="" />
+              <p class="number-input-score">/ 2</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use common punctuation and capitalization rules correctly</p>
+              <input type="text" class="number-input language"  value="" />
+              <p class="number-input-score">/ 3</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can combine sentences for clarity</p>
+              <input type="text" class="number-input language"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can choose the sentence that best completes a paragraph</p>
+              <input type="text" class="number-input language"  value="" />
+              <p class="number-input-score">/ 4</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can summarize the main idea</p>
+              <input type="text" class="number-input language"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can sequence sentences</p>
+              <input type="text" class="number-input language"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <!-- TOTAL -------------------- -->
+            <div class="number-input-row">
+              <p class="number-input-description total">Total Language</p>
+              <input type="text" id="language-total-display" class="number-input total" disabled/>
+              <p class="number-input-score total">/ 20</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="flex flex-row w-full bg-grey-lighter">
+          <div class="input-col">
+            <!-- Mathematics Objectives ------------------------------------------------------------------ -->
+            <div class="header-1" style="display: flex; flex-direction: row;">
+              <h1 class="h1-left">Mathematics Objectives</h1>
+              <h1 class="h1-right">Items Correct</h1>
+            </div>
+            <!-- -------------------- -->
+            <div class="number-input-row">
+              <p class="number-input-description">Can recognize simple fractional parts</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can identify related math facts</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can divide two-digit numbers by a one-digit number</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can identify the missing subtrahend or addend in a given problem</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can identify the correct math operation to solve a story problem </p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can add three-digit numbers</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use multiplication or addition to solve story	problems</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 2</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use estimation to solve story problems</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can read, understand, and apply graph data</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 4</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can express numbers using numerals</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 2</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use addition or subtraction to solve story problems</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can identify relevant information to solve story problems</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can estimate solutions for addition problems with up to three-digit sums</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use flips, reflections, rotation techniques to move geometric shapes</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use various scales to solve story problems</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use and apply facts to solve story problems</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can apply probability concepts to solve story problems</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can solve story problems involving money</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can use a ruler</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can determine area and perimeter</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 2</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can identify symmetry</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can identify a number pattern in a sequence of shapes	</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can identify a number pattern in a sequence of numbers</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <div class="number-input-row">
+              <p class="number-input-description">Can identify geometric shapes used to construct a structure</p>
+              <input type="text" class="number-input math"  value="" />
+              <p class="number-input-score">/ 1</p>
+            </div>
+            <!-- TOTAL -------------------- -->
+            <div class="number-input-row">
+              <p class="number-input-description total">Total Mathematics</p>
+              <input type="text" id="math-total-display" class="number-input total" disabled/>
+              <p class="number-input-score total">/ 30</p>
+            </div>
+          </div>
+        </div>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="container">
+        <button class='generate-button' id="generate-button">Generate PDF</button>
+      </div>
+    </div>
+  </body>
+</html>
