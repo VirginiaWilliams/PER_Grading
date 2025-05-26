@@ -14,6 +14,11 @@ Current version has forms 12-21/22 for TN3
 4. Run the application
  - Double click on the `PER Grader.exe`
 5. Pin to toolbar for easy access
- - In the toolbar right click and select `Pin to taskbar`
+ - In the toolbar right click the app's icon and select `Pin to taskbar`
  - Done!
 
+ ### Video Walkthrough
+
+[Setup Video](https://github.com/VirginiaWilliams/PER_Grading/blob/main/VideoWalkthrough/PERGraderSetupInstructions.mp4)
+
+[Pin Grader Video](https://github.com/VirginiaWilliams/PER_Grading/blob/main/VideoWalkthrough/PinPERGrader.mp4)
