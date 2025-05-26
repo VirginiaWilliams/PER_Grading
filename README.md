@@ -19,6 +19,5 @@ Current version has forms 12-21/22 for TN3
 
  ### Video Walkthrough
 
-[![Setup Video](https://github.com/VirginiaWilliams/PER_Grading/blob/main/assets/SetupThumbnail.png)](https://github.com/VirginiaWilliams/PER_Grading/blob/main/assets/PERGraderSetupInstructions.mp4)
+[Setup Videos](https://github.com/VirginiaWilliams/PER_Grading/blob/main/VideoWalkthroughs)
 
-[![Pin Grader Video](https://github.com/VirginiaWilliams/PER_Grading/blob/main/assets/PinThumbnail.png)](https://github.com/VirginiaWilliams/PER_Grading/blob/main/assets/PinPERGrader.mp4)
