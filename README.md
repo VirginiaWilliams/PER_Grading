@@ -1,7 +1,7 @@
-# Hello Mom!!
-
-# How to Download
-## Only need to do this to do these steps for initial install and when I update it
+# Welcome to PER Grader
+Current version has forms 12-21/22 for TN3
+## How to Download and Run
+### Only need to do this to do these steps for initial install and when I update it
 
 1. Download project
  - From the repository home page, click the zip file `PER Grader-win32-x64.7z`
